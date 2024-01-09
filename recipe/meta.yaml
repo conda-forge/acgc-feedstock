@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -42,6 +42,8 @@ test:
 
 about:
   home: https://github.com/cdholmes/acgc-python
+  doc_url: https://cdholmes.github.io/acgc-python
+  dev_url: https://github.com/cdholmes/acgc-python
   summary: A collection of data analysis programs used by the Atmospheric Chemistry and Global Change (ACGC) research group
   license: LGPL-3.0-or-later
   license_file: LICENSE
