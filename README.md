@@ -9,6 +9,10 @@ Package license: LGPL-3.0-or-later
 
 Summary: A collection of data analysis programs used by the Atmospheric Chemistry and Global Change (ACGC) research group
 
+Development: https://github.com/cdholmes/acgc-python
+
+Documentation: https://cdholmes.github.io/acgc-python
+
 Current build status
 ====================
 
