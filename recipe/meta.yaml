@@ -1,5 +1,5 @@
 {% set name = "acgc" %}
-{% set version = "0.2" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/acgc-{{ version }}.tar.gz
-  sha256: 2ba6c4bd733dc817e67869a750b38d0a6196b83047cc91b427dadc304e2bbce0
+  sha256: c4bc750ed8d443de144c6882e12cf62d0316015066d75e0ca7c29da71aa6e7b3
 
 build:
   noarch: python
