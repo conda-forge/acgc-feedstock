@@ -1,0 +1,57 @@
+schema_version: 1
+
+context:
+  name: acgc
+  version: 0.3.1
+  python_min: "3.9"
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/acgc-${{ version }}.tar.gz
+  sha256: 1e9e44e5000f366941903eb8d629184537fa528b60d65088bce9eee06171cd80
+
+build:
+  noarch: python
+  number: 2
+  script: python -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=61.0
+    - setuptools-scm >=8.0
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - matplotlib-base
+    - matplotlib-inline
+    - cartopy
+    - numpy
+    - scipy
+    - pandas
+    - netcdf4
+    - scikit-learn
+    - statsmodels
+    - cmcrameri
+
+tests:
+  - python:
+      imports:
+        - acgc
+      python_version: ${{ python_min }}.*
+      pip_check: true
+
+about:
+  homepage: https://github.com/cdholmes/acgc-python
+  license: LGPL-3.0-or-later
+  license_file: LICENSE
+  summary: A collection of data analysis programs used by the Atmospheric Chemistry and Global Change (ACGC) research group
+  documentation: https://cdholmes.github.io/acgc-python
+  repository: https://github.com/cdholmes/acgc-python
+
+extra:
+  recipe_maintainers:
+    - cdholmes
