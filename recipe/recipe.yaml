@@ -53,5 +53,5 @@ about:
   repository: https://github.com/cdholmes/acgc-python
 
 extra:
-  recipe_maintainers:
+  recipe-maintainers:
     - cdholmes
