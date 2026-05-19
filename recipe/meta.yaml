@@ -1,18 +1,18 @@
 {% set name = "acgc" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/acgc-{{ version }}.tar.gz
-  sha256: 1e9e44e5000f366941903eb8d629184537fa528b60d65088bce9eee06171cd80
+  sha256: b9aa863a7b8a76a1bd3602d13299fea0ecbb4f2a2855e3c88334b89015cf5c26
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
